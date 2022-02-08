@@ -5,7 +5,9 @@ const goodAmountUser = +prompt('Количество товара');
 const goodCategoryUser = prompt('Категория товара');
 const goodPriceUser = +prompt('Цена товара');
 
-if (!goodNameUser.trim() || !goodCategoryUser.trim() || goodNameUser === '' || goodAmountUser === 0 || goodCategoryUser === '' || goodPriceUser === 0 || isNaN(goodAmountUser) || isNaN(goodPriceUser)) {
+if (goodNameUser === null || goodCategoryUser === null) {
+    console.log('Вы ввели некорректные данные')
+} else if (!goodNameUser.trim() || !goodCategoryUser.trim() || goodNameUser === '' || goodAmountUser === 0 || goodCategoryUser === '' || goodPriceUser === 0 || isNaN(goodAmountUser) || isNaN(goodPriceUser)) {
     console.log('Вы ввели некорректные данные');
 } else {
     console.log('Наименование товара: ' + typeof goodNameUser);
