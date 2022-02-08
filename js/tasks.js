@@ -20,10 +20,10 @@ if ((mathResult + rusResult + techResult) >= needScore) {
 
 const money = +prompt('Сколько денег вы хотите снять?');
 
-if (money < 100) {
-    console.log('Банкомат выдаёт только от 100 рублей')
-} else {
+if (money % 100 === 0) {
     console.log(`Пожалуйста, заберите свои ${money} рублей`);
+} else {
+    console.log('Банкомат может выдавать минимальные целые купюры 100 рублей')
 }
 
 
